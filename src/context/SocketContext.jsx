@@ -7,7 +7,7 @@ export function SocketProvider({ children }) {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const newSocket = io('https://polling-be.vercel.app/');
+    const newSocket = io('https://pollingbe.onrender.com/');
     setSocket(newSocket);
 
     return () => newSocket.close();
