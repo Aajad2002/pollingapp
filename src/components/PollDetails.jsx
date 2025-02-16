@@ -28,7 +28,7 @@ function PollDetails() {
 
   const fetchPoll = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/polls');
+      const response = await fetch('https://pollingbe.onrender.com/api/polls');
       const polls = await response.json();
       const currentPoll = polls.find(p => p._id === id);
       
@@ -47,7 +47,7 @@ function PollDetails() {
     if (voted) return;
 
     try {
-      const response = await fetch(`http://localhost:8080/api/polls/${id}/vote`, {
+      const response = await fetch(`https://pollingbe.onrender.com/api/polls/${id}/vote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -24,7 +24,7 @@ function PollList() {
 
   const fetchPolls = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/polls');
+      const response = await fetch('https://pollingbe.onrender.com/api/polls');
       const data = await response.json();
       setPolls(data);
     } catch (error) {

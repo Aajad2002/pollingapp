@@ -38,7 +38,7 @@ function CreatePoll() {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/api/polls', {
+      const response = await fetch('https://pollingbe.onrender.com/api/polls', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
